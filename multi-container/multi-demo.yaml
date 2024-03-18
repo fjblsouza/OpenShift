@@ -22,7 +22,7 @@ message: |-
   creationTimestamp: "2021-09-02T13:42:21Z"
   labels:
     samples.operator.openshift.io/managed: "true"
-  name: multi-test-postgresql-persistent
+  name: multi-demo-postgresql-persistent
   namespace: 
   resourceVersion: "14091"
   uid: bc4db629-54f1-4929-a993-a6f455a1ef4b
