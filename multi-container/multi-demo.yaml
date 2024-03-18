@@ -1,17 +1,19 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  app: multi-demo-postgresql-persistent
+  app: multi-test-postgresql-persistent
   template: multi-postgresql-persistent
 message: |-
   The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.
 
+  For more information about using this template, including OpenShift considerations, see https://github.com/linuxacademy/Red-Hat-Certified-Specialist-in-Containers-and-Kubernetes/blob/main/nodejs-rest-http-crud/README.md.
+metadata:
   annotations:
     description: An example Node.js application with a PostgreSQL database. 
       modified from openshift example template Node.js+PostgreSQL and a application 
-      https://github.com/fjblsouza/nodejs-rest-http-crud
+      https://github.com/nodeshift-starters/nodejs-rest-http-crud/
     iconClass: 
-    openshift.io/display-name: Multi-Container Demo
+    openshift.io/display-name: Multi-Container Test
     openshift.io/documentation-url: https://github.com/nodeshift-starters/nodejs-rest-http-crud
     openshift.io/long-description:
     openshift.io/provider-display-name: JB 
@@ -22,7 +24,7 @@ message: |-
   creationTimestamp: "2021-09-02T13:42:21Z"
   labels:
     samples.operator.openshift.io/managed: "true"
-  name: multi-demo-postgresql-persistent
+  name: multi-test-postgresql-persistent
   namespace: 
   resourceVersion: "14091"
   uid: bc4db629-54f1-4929-a993-a6f455a1ef4b
@@ -306,7 +308,7 @@ parameters:
   displayName: Git Repository URL
   name: SOURCE_REPOSITORY_URL
   required: true
-  value: https://github.com/fjblsouza
+  value: https://github.com/linuxacademy/Red-Hat-Certified-Specialist-in-Containers-and-Kubernetes
 - description: Set this to a branch name, tag or other ref of your repository if you
     are not using the default branch.
   displayName: Git Reference
